@@ -1,0 +1,28 @@
+<html>
+<body>
+    <h1>function</h1>
+
+    <script>
+        function plus(a,b){
+            console.log(a+b);
+        }
+        plus(4,5);
+        function minus(a,b){
+            console.log(a-b);
+        }
+        minus(4,5);
+
+
+        function interest(principal, interestRate, day){
+            return principal*(interestRate/100)*(day/365);
+        }
+        
+        console.log(interest(1000000, 4.3, 30));
+        
+
+        document.write(Math.floor(interest(10000000, 5, 60)));
+
+
+    </script>
+</body>
+</html>

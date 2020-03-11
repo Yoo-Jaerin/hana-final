@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JAERIN - html</title>
+    <meta charset="utf-8">
+    <style>
+        h1{ font-size:70px; }
+        a{ color:yellowgreen; }
+        input{ color:royalblue; background-color:powderblue; font-size:20px; }
+    </style>
+    <script>
+        function login(self){
+            if(self.value==='login'){
+            var password='1111';
+            var id='jaerin';
+            var inputId = prompt('ID?');
+            var inputPassword = prompt('password?');
+            if(inputPassword===password&&inputId===id){
+               alert('로그인되었습니다.');
+               const utterance = new SpeechSynthesisUtterance('반갑습니다');
+               window.speechSynthesis.speak(utterance);
+               self.value='logout';
+            }else{
+                alert('정보가 일치하지 않습니다.');
+            }
+        }else{
+            if(confirm('로그아웃하시겠습니까?')){
+                alert('로그아웃되었습니다.');
+                self.value='login';
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+<h1>유재린</h1>
+
+<strong>안녕하세요. 반가워요. 좋은하루보내세요.</strong>
+
+<br>
+<u><strong><a href="https://www.youtube.com/embed/7d5vl2Q29Gw">애기 보러가기</a></strong></u>
+<br><br>
+<input type="button" value="login" onclick="
+    login(this);
+">
+
+
+<h2 style='color:slateblue'>먹고싶은 메뉴 고르기(누르면 가격이 표시됩니다)</h2>
+<img src="떡볶이.jpg" height="250" width="250" onclick="alert('3,000원')">
+<img src="파스타.jpg" height="250" width="250" onclick="alert('5,000원')">
+<img src="김치찌개.jpg" height="250" width="250" onclick="alert('6,000원')">
+
+<br><br>
+<strong>다른 메뉴가 먹고싶으면 입력하세요.</strong>
+<input type="text" onchange="alert('다음에 준비하겠습니다^^')"> 
+
+<br><br>
+<h3><a href="index.html">PERFUME SHOPPING</a></h3>
+
+<!-- 주석 -->
+
+<ol>
+    <li><a href="111.html">CHANEL</a></li>
+    <li><a href="222.html">DIOR</a></li>
+    <li><a href="333.html">DIPTYQUE</a></li>
+</ol>
+
+<img src="chanel.gif" height="315" width="215">
+<img src="fashion.gif" height="315" width="215">
+<img src="beauty.gif" height="315" width="465">
+<img src="chance.gif" height="315" width="215">
+<br>
+<img src="girl2.gif" height="315" width="215">
+<img src="cosmetic.gif" height="315" width="465">
+<img src="bottle.gif" height="315" width="215">
+<img src="girl3.gif" height="315" width="215">
+</body>
+</html>
+
+
+
+
+

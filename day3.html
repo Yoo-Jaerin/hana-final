@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB - CSS</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+        h1{ font-size:100px; }
+        input{ background-color:lightseagreen; color:white; font-size:20px; }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1><a href="day3.html">WEB</a></h1>
+    </header>
+    <nav>
+        <ol style="color:royalblue;">
+            <li><a href="1.html">html</a></li>
+            <li><a href="2.html">css</a></li>
+            <li><a href="3.html">javascript</a></li>
+        </ol>
+    </nav>
+    <aticle>
+    <br>
+    <input style="background-color:plum;" type="button" value="login" onclick="
+        if(this.value==='login'){
+            var password='0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c';
+            var id='jaerin';
+            var inputId = prompt('ID?');
+            var inputPassword = sha256(prompt('password?'));
+            if(inputPassword===password&&inputId===id){
+               alert('로그인되었습니다.');
+               const utterance = new SpeechSynthesisUtterance('반갑습니다');
+               window.speechSynthesis.speak(utterance);
+               this.value='logout';
+            }else{
+                alert('정보가 일치하지 않습니다.');
+                document.querySelector('body').className='hinge';
+            }
+        }else{
+            if(confirm('로그아웃하시겠습니까?')){
+                alert('로그아웃되었습니다.');
+                this.value='login';
+            }
+        }
+    ">
+    <br><br>
+        <!--
+            1. 버튼을 어디다 두지?
+            2. 버튼을 어떻게 만들지?
+            3. 버튼을 클릭했을 때 js가 실행되게 어떻게 하지?
+            4. body tag를 어떻게 js로 선택하지?
+            5. 선택한 body tag의 style을 어떻게 바꾸지?
+            6. background-color, color를 어떻게 바꾸지?
+        -->
+        <script>
+            var bodyTag = document.querySelector('body');
+        </script>
+        <input type="button" value="night" onclick="
+            alert('hi');
+            bodyTag.style.backgroundColor='black';
+            bodyTag.style.Color='white';
+        ">
+        <input type="button" value="day" onclick="
+            alert('hi');
+            bodyTag.style.backgroundColor='white';
+            bodyTag.style.Color='black';
+        ">
+        <input type="button" value="night" onclick="
+        var links = document.querySelectorAll('a');
+            if(this.value==='day'){
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.Color='black';
+                this.value='night'
+
+                var i=0;    
+                while(i<links.length){
+                    links[i].style.color='coral';
+                    i++;
+                }
+
+            }else{
+                bodyTag.style.backgroundColor='black';
+                bodyTag.style.Color='white';
+                this.value='day'
+
+                var i=0;    
+                while(i<links.length){
+                    links[i].style.color='coral';
+                    i++;
+                }
+            }
+        
+        ">
+        <h2>css</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A exercitationem cumque, adipisci quaerat vitae quidem ea debitis odit libero dolorum enim nesciunt dicta, molestiae earum. Similique ipsa earum necessitatibus saepe?
+    </aticle>
+
+</body>
+</html>    
