@@ -3,10 +3,23 @@
 <head>
     <title>JAERIN - html</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Kreon&display=swap" rel="stylesheet">
     <style>
-        h1{ font-size:70px; }
-        a{ color:yellowgreen; }
-        input{ color:royalblue; background-color:powderblue; font-size:20px; }
+        h1{ font-size:70px; font-family: 'Do Hyeon', sans-serif; }
+        h2{ font-size:25px; }
+        body{ font-size:17px; margin:40px; }
+        a{ color:indianred; }
+        input{ color:royalblue; background-color:snow; font-size:15px; }
+        h1{ 
+            border: 5px solid powderblue;
+            padding: 20px;
+            width: 1100px;
+            }
+        #container{
+        display:grid;
+        grid-template-columns:500px 550px 140px;
+    }
     </style>
     <script>
         function login(self){
@@ -22,6 +35,7 @@
                self.value='logout';
             }else{
                 alert('정보가 일치하지 않습니다.');
+                document.querySelector('body').className='hinge';
             }
         }else{
             if(confirm('로그아웃하시겠습니까?')){
@@ -33,36 +47,47 @@
     </script>
 </head>
 <body>
-<h1>유재린</h1>
-
+<h1>Welcome to Jaerin's Shop <img src="smile.png" height="50" width="50"></h1>
+<div id="container">
+<div>
 <strong>안녕하세요. 반가워요. 좋은하루보내세요.</strong>
-
 <br>
-<u><strong><a href="https://www.youtube.com/embed/7d5vl2Q29Gw">애기 보러가기</a></strong></u>
-<br><br>
-<input type="button" value="login" onclick="
-    login(this);
+<form action="https://www.google.com/search">
+    <input type="text" name="q" value="">
+    <input type="submit" value="search">
+</form>
+</div>
+<div>
+<u><strong><a href="https://www.youtube.com/embed/faju50dM8M4">>>>2020 SS Trend 보러가기</a></strong></u>
+</div>
+
+<div>
+<input type="button" value="login" onclick="login(this);">
+<script>
+    var bodyTag = document.querySelector('body');
+</script>
+
+<input type="button" value="night" onclick="
+
+    if(this.value==='day'){
+        bodyTag.style.backgroundColor='white';
+        bodyTag.style.color='black';
+        this.value='night'
+    }else{
+        bodyTag.style.backgroundColor='black';
+        bodyTag.style.color='white';
+        this.value='day'
+    }
 ">
+</div>
+</div>
+<br>
+<h2 style="font-family: 'Kreon', serif;"><a href="index.html">Perfume Shopping</a></h2>
 
-
-<h2 style='color:slateblue'>먹고싶은 메뉴 고르기(누르면 가격이 표시됩니다)</h2>
-<img src="떡볶이.jpg" height="250" width="250" onclick="alert('3,000원')">
-<img src="파스타.jpg" height="250" width="250" onclick="alert('5,000원')">
-<img src="김치찌개.jpg" height="250" width="250" onclick="alert('6,000원')">
-
-<br><br>
-<strong>다른 메뉴가 먹고싶으면 입력하세요.</strong>
-<input type="text" onchange="alert('다음에 준비하겠습니다^^')"> 
-
-<br><br>
-<h3><a href="index.html">PERFUME SHOPPING</a></h3>
-
-<!-- 주석 -->
-
-<ol>
-    <li><a href="111.html">CHANEL</a></li>
-    <li><a href="222.html">DIOR</a></li>
-    <li><a href="333.html">DIPTYQUE</a></li>
+<ol style="font-size: 17px; font-family: 'Kreon', serif;"> 
+    <li><a href="11.html">CHANEL</a></li>
+    <li><a href="22.html">DIOR</a></li>
+    <li><a href="33.html">DIPTYQUE</a></li>
 </ol>
 
 <img src="chanel.gif" height="315" width="215">
@@ -74,6 +99,15 @@
 <img src="cosmetic.gif" height="315" width="465">
 <img src="bottle.gif" height="315" width="215">
 <img src="girl3.gif" height="315" width="215">
+
+<br><br>
+<h3 style='color:olive'>오늘뭐먹지? (가격은 누르면 나와요)</h3>
+<img src="떡볶이.jpg" height="250" width="250" onclick="alert('3,000원')">
+<img src="파스타.jpg" height="250" width="250" onclick="alert('5,000원')">
+<img src="김치찌개.jpg" height="250" width="250" onclick="alert('6,000원')">
+<br>
+다른 메뉴가 먹고싶으면 입력하세요.
+<input type="text" onchange="alert('다음에 준비하겠습니다^^')"> 
 </body>
 </html>
 

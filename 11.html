@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    a{ color:indianred; }
+    body{ font-size:12px; background-color:snow; margin:40px;}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Kreon&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 style="font-family: 'Kreon', serif;"><a href="index.html">Perfume Shopping</a></h1>
+
+<!-- 주석 -->
+
+<ol style="font-family: 'Kreon', serif; font-size: 15px;">
+    <li><a href="11.html">CHANEL</a></li>
+    <li><a href="22.html">DIOR</a></li>
+    <li><a href="33.html">DIPTYQUE</a></li>
+</ol>
+
+
+<form action="https://www.google.com/search">
+    다른상품찾기>>>
+    <input type="text" name="q" value="">
+    <input type="submit" value="search">
+</form>
+달러계산기>>>
+<input type="text" id="cost">
+<input type="button" value="calculate" onclick="
+    fetch('https://api.exchangeratesapi.io/latest').then(function(result){return result.json()}).then(function(json){alert('$'+Math.floor(document.querySelector('#cost').value/json.rates.KRW)+'입니다.');});
+">
+<br>
+<img src="shop1.png" height="500" width=auto>
+</body>
+</html>
+
+
+
+
+
